@@ -8,6 +8,7 @@
 
 /* base styles & title */
 body{
+
   font-family: "Noto Serif";
   color: var(--secondary);
 }
@@ -15,11 +16,24 @@ body{
   max-width: 960px;
   margin: 0 auto;
 }
-.title h1{
-  color: var(--primary);
-  font-size: 1.2rem;
+.logo {
+  background: linear-gradient(to bottom,#0891B2 ,#67E8F9);
+  border-radius: 100%;
+  margin: auto 0;
+  margin-right: 10px;
+  width: 50px;
+  height: 50px;
+}
+.brand{
+  display: flex;;
+}
+.Navbar h1{
+  color: white;
+  cursor: pointer;
+  font-size: 1.5rem;
   letter-spacing: 2px;
   font-weight: normal;
+  /* grid-area: header; */
 }
 .title h2, .title p{
   text-align: center;
@@ -40,19 +54,22 @@ label input{
   opacity: 0;
 }
 label{
+  cursor: pointer;
   display: block;
   width: 30px;
   height: 30px;
-  border: 1px solid var(--primary);
-  border-radius: 50%;
+  border: 2px solid #DB2777;
+  border-radius: 25%;
   margin: 10px auto;
-  line-height: 30px;
-  color: var(--primary);
+  line-height: 25px;
+  color: #DB2777;
   font-weight: bold;
   font-size: 24px;
 }
+
 label:hover{
-  background: var(--primary);
+  background: linear-gradient(to right, #DB2777,#008aff);
+  border: 2px solid transparent;
   color: white;
 }
 .output{
@@ -66,7 +83,8 @@ label:hover{
 /* progress bar styles */
 .progress-bar{
   height: 5px;
-  background: var(--primary);
+  background: linear-gradient(to right, #DB2777,#008aff);
+  opacity: 0.8;
   margin-top: 20px;
 }
 
@@ -83,7 +101,7 @@ label:hover{
   padding: 50% 0;
   /* padding controls height, will always be perfectly square regardless of width */
   position: relative;
-  opacity: 0.8;
+  opacity: 1;
 }
 .img-wrap img{
   min-width: 100%;
@@ -110,4 +128,59 @@ label:hover{
   margin: 60px auto;
   box-shadow: 3px 5px 7px rgba(0,0,0,0.5);
   border: 3px solid white;
+}
+
+.Navbar{
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+  background: linear-gradient(to right, #DB2777,#008aff);
+  box-sizing: border-box;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 5px 10px;
+  /* display: grid; */
+  /* grid-area:
+  'header header header header header header header header header switch';  */
+}
+
+.Switch{
+  /* display: grid; */
+  /* grid-area: switch; */
+  /* position: fixed; */
+  float: right;
+  position: sticky;
+  top: 17px;
+  margin-block-start: -5em;
+  /* margin-block-end: 1.37em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px; */
+  z-index: 1;
+}
+
+::-webkit-scrollbar{
+  width: 14px;
+  /* background: rgba(0,0,0,0.05); */
+}
+::-webkit-scrollbar-thumb{
+  background: linear-gradient(transparent,#30ff00);
+  border-radius: 8px;
+  animation: animate 5s linear infinite;
+  filter: blur(30px);
+}
+::-webkit-scrollbar-thumb:hover{
+  background: linear-gradient(transparent,#00c6ff);
+}
+@keyframes animate
+{
+    0%,100%
+    {
+         filter: hue-rotate(0deg);
+    }
+    50%
+    {
+         filter: hue-rotate(360deg);
+    }
+  
 }

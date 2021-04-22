@@ -92,21 +92,28 @@ label:hover{
 .img-grid{
   margin: 20px auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   grid-gap: 40px;
 }
 .img-wrap{
   overflow: hidden;
-  height: 0;
-  padding: 50% 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 25px;
+  height: 10px;
+  padding: 20% 0;
   /* padding controls height, will always be perfectly square regardless of width */
   position: relative;
   opacity: 1;
 }
 .img-wrap img{
-  min-width: 100%;
-  min-height: 100%;
-  max-width: 150%;
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  min-width: 50%;
+  min-height: 85%;
+  max-width: 50%;
+  max-height: 85%;
   position: absolute;
   top: 0;
   left: 0;
@@ -184,3 +191,87 @@ label:hover{
     }
   
 }
+
+.socials{
+  display: grid;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-template-rows: 1fr 1fr 1fr 1fr 2fr;
+  grid-row-gap: 12px;
+  transform: translateY(-192px);
+  grid-template-columns: 1fr 10fr 1fr;
+  grid-column-gap: 10px;
+  /* margin-left: 52%;
+  position: absolute;
+  top: 0%; */
+}
+.socials button:focus{
+  outline: none;
+}
+.socials .likeNum{
+  transform: translateY(-5px);
+  display: grid;
+  grid-column-start: 2;
+  /* display: flex; */
+}
+.icon-like{
+  display: grid;
+  grid-row-start: 1;
+}
+.icon-comment{
+  display: grid;
+  grid-row-start: 4;
+}
+.icon-share{
+  display: grid;
+  grid-row-start: 2;
+}
+.icon-save {
+  display: grid;
+  grid-row-start: 3;
+}
+.socials .boxx{
+  padding: 0;
+  background: transparent;
+  display: grid;
+  grid-column: 2;
+  grid-row: 4;
+  height: 1.1876em !important;
+}
+.socials .comment-box{
+  height: 85px;
+  overflow: hidden;
+  display: block;
+  padding: 3px;
+  display: block;
+  grid-column: 2;
+  grid-row: 5;
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+.socials .comment-list{
+  font-size: 13px;
+  padding: 0;
+  margin: 0;
+}
+.socials ul::before {
+  content: "\2022";
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin: 0 1em;
+}
+.post-comment{
+  display: grid;
+  grid-column: 3;
+  grid-row: 4;
+  transform: translateY(-8px);
+}
+.socials form{
+  display: contents;
+}
+
+
+
+/* @media screen and (max-width: 640px); */
+

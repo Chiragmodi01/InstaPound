@@ -1,5 +1,6 @@
 import { ThemeProvider, CssBaseline, createMuiTheme, Switch } from '@material-ui/core';
 import React, { useState } from 'react';
+import ScrollTop from './comps/ScrollTop';
 import ImageGrid from './comps/ImageGird';
 import Modal from './comps/Modal';
 import Title from './comps/Title';
@@ -35,6 +36,7 @@ function App() {
       <ImageGrid setSelectedImg={setSelectedImg} />
       { selectedImg && <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />}
     </div>
+    < ScrollTop showBelow={250}/>
     </CssBaseline>
     </ThemeProvider>
   );

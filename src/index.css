@@ -2,15 +2,31 @@
 
 :root{
   --primary: #efb6b2;
-  --secondary: #4e4e4e;
+  /* --secondary: #4e4e4e; */
   --error: #ff4a4a;
+  --blue: rgb(33, 37, 41);
+  --white: rgb(255, 255, 255);
 }
 
 /* base styles & title */
 body{
-
   font-family: "Noto Serif";
-  color: var(--secondary);
+  /* color: var(--secondary); */
+  background: var(--background-color);
+  color: var(--text-color);
+  font-weight: var(--font-weight);
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+body.light {
+  --background-color: var(--white);
+  --text-color: var(--blue);
+  --font-weight: 400;
+}
+
+body.dark {
+  --background-color: var(--blue);
+  --text-color: var(--white);
+  --font-weight: 500;
 }
 .App{
   max-width: 960px;
@@ -33,10 +49,10 @@ body{
   font-size: 1.5rem;
   letter-spacing: 2px;
   font-weight: normal;
-  /* grid-area: header; */
 }
 .title h2, .title p{
   text-align: center;
+  color: var(--text-color);
 }
 .title h2{
   margin-top: 60px;
@@ -140,28 +156,18 @@ label:hover{
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   padding: 5px 10px;
-  /* display: grid; */
-  /* grid-area:
-  'header header header header header header header header header switch';  */
 }
 
 .Switch{
-  /* display: grid; */
-  /* grid-area: switch; */
-  /* position: fixed; */
   float: right;
   position: sticky;
   top: 17px;
   margin-block-start: -5em;
-  /* margin-block-end: 1.37em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px; */
   z-index: 1;
 }
 
 ::-webkit-scrollbar{
   width: 14px;
-  /* background: rgba(0,0,0,0.05); */
 }
 ::-webkit-scrollbar-thumb{
   background: linear-gradient(transparent,#30ff00);

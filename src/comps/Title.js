@@ -4,7 +4,7 @@ const Title = () => {
   return (
     <div className="title">
       <h2>Active Feed</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>A picture is worth thousand words, but a memory is priceless.</p>
     </div>
   )
 }

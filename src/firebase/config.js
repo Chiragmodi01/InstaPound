@@ -2,17 +2,17 @@
  import 'firebase/storage';
  import 'firebase/firestore';
  
- // Your web app's Firebase configuration
- var firebaseConfig = {
-    apiKey: "AIzaSyBVJ_j_3mwSQ0m02TnRXLvwX31TFgObPEE",
-    authDomain: "cm-firegram.firebaseapp.com",
-    projectId: "cm-firegram",
-    storageBucket: "cm-firegram.appspot.com",
-    messagingSenderId: "371066795115",
-    appId: "1:371066795115:web:803ad2a3842dd67dc1ed2e"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+// Your web app's Firebase configuration
+var firebaseConfig = {
+  apiKey: "AIzaSyCfYbS1ViuQ44RTdu_hprRRTeQk-qNZfWE",
+  authDomain: "instapound-e84cb.firebaseapp.com",
+  projectId: "instapound-e84cb",
+  storageBucket: "instapound-e84cb.appspot.com",
+  messagingSenderId: "1898808251",
+  appId: "1:1898808251:web:d849a16686a89137933a9e"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
 
  const projectStorage = firebase.storage();

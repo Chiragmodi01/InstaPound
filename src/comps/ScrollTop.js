@@ -49,9 +49,11 @@ const ScrollTop = (
     }
     return (
         <div>
+            {show &&
             <IconButton onClick={handleClick} className={classes.toTop}>
                 <ExpandLessIcon />
             </IconButton>
+            }
         </div>
     )
 }

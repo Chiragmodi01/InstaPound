@@ -30,9 +30,9 @@ const ScrollTop = (
 
     const handleScroll = () => {
         if (window.pageYOffset > showBelow) {
-            if (!show) setShow(false)
+            if (!show) setShow(true)
         } else {
-            if (show) setShow(true)
+            if (show) setShow(false)
         }
     }
 

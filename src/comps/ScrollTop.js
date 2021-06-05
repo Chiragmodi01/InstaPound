@@ -20,9 +20,9 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 
-const ScrollTop = (
+const ScrollTop = ({
     showBelow
-) => {
+}) => {
 
     const classes = useStyles();
 

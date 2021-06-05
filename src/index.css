@@ -2,7 +2,6 @@
 
 :root{
   --primary: #efb6b2;
-  /* --secondary: #4e4e4e; */
   --error: #ff4a4a;
   --blue: rgb(33, 37, 41);
   --white: rgb(255, 255, 255);
@@ -11,7 +10,7 @@
 /* base styles & title */
 body{
   font-family: "Noto Serif";
-  /* color: var(--secondary); */
+  margin-top: 0;
   background: var(--background-color);
   color: var(--text-color);
   font-weight: var(--font-weight);
